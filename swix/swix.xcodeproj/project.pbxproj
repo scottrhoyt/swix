@@ -385,7 +385,6 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/swix/swix",
 					"$(PROJECT_DIR)/swix/swix/objc",
-					"$(PROJECT_DIR)/swix/objc",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -403,7 +402,6 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/swix/swix",
 					"$(PROJECT_DIR)/swix/swix/objc",
-					"$(PROJECT_DIR)/swix/objc",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
