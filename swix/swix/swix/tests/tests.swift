@@ -28,7 +28,7 @@ class swixTests {
         complexTests()
         
         numberTests()
-        ndarrayTests()
+        _ = ndarrayTests()
         matrixTests()
         set_theory_tests()
     }
@@ -96,7 +96,7 @@ class swixTests {
         }
         func fft_test(){
             let x = arange(8)
-            var (yr, yi) = fft(x)
+            let (yr, yi) = fft(x)
             let x2 = ifft(yr, yi: yi)
             assert(x2 ~== x)
             print("fft/ifft works. fft(x) -> (yreal, yimag)")
@@ -116,13 +116,13 @@ class swixTests {
         }
         func svd_test(){
             let x = array("1 2; 4 8; 3 5")
-            var (u, s, v) = svd(x)
+            (_, _, _) = svd(x)
             
             let y = array("1 2 3; 4 5 6")
-            (u, s, v) = svd(y)
+            (_, _, _) = svd(y)
             
             let z = array("1 2 3; 4 5 6; 7 8 9")
-            (u, s, v) = svd(z)
+            (_, _, _) = svd(z)
             
             print("svd works and tested by hand for square, fat and skinny matrices against Python")
         }
@@ -288,7 +288,7 @@ class swixTests {
         let x = randn((4,4))
         assert(eye(4).dot(eye(4)) ~== eye(4))
         assert(x.dot(x.I) ~== eye(4))
-        var (u,v) = meshgrid(array(0,1), y: array(2,3))
+        let (u, v) = meshgrid(array(0,1), y: array(2,3))
         assert(u ~== `repeat`(array(0,1), N: 2).reshape((2,2)).T)
         assert(v ~== `repeat`(array(2,3), N: 2).reshape((2,2)))
         

@@ -46,7 +46,7 @@ func pe10(){
 func pe73(){
     let N = 1e3
     let i = arange(N)+1
-    var (n, d) = meshgrid(i, y: i)
+    let (n, d) = meshgrid(i, y: i)
     
     var f = (n / d).flat
     f = unique(f)
@@ -58,7 +58,7 @@ func pe73(){
 func soft_thresholding(){
     let N = 1e2.int
     let j = linspace(-1, max: 1, num:N)
-    var (x, y) = meshgrid(j, y: j)
+    let (x, y) = meshgrid(j, y: j)
     var z = pow(x, power: 2) + pow(y, power: 2)
     let i = abs(z) < 0.5
     z[argwhere(i)] *= 0
