@@ -18,7 +18,7 @@ class swixSpeedTests {
         time(soft_thresholding, name:"Soft thresholding")
     }
 }
-func time(f:()->(), name:String="function"){
+func time(f:(()->()), name:String="function"){
     let start = NSDate()
     f()
     print(NSString(format:"\(name) time (s): %.4f", -1 * start.timeIntervalSinceNow))
